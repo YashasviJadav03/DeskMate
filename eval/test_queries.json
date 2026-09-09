@@ -1,0 +1,107 @@
+[
+  {
+    "query": "What is your return policy?",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["30 days", "return", "refund"]
+  },
+  {
+    "query": "How do I track my order?",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["track", "My Orders", "tracking"]
+  },
+  {
+    "query": "What payment methods do you accept?",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["Visa", "PayPal", "credit"]
+  },
+  {
+    "query": "Tell me about your warranty policy",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["warranty", "1-year", "defect"]
+  },
+  {
+    "query": "Do you ship internationally?",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["international", "countries", "shipping"]
+  },
+  {
+    "query": "How does your loyalty program work?",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["points", "rewards", "tier"]
+  },
+  {
+    "query": "What is your privacy policy?",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["privacy", "data", "information"]
+  },
+  {
+    "query": "Check the status of order #12345",
+    "expected_route": "actionable",
+    "expected_agent": "action_agent",
+    "expected_tool": "check_order_status",
+    "expected_keywords": ["ORD-12345", "Shipped"]
+  },
+  {
+    "query": "Where is my order ORD-67890?",
+    "expected_route": "actionable",
+    "expected_agent": "action_agent",
+    "expected_tool": "check_order_status",
+    "expected_keywords": ["ORD-67890", "Processing"]
+  },
+  {
+    "query": "I want to file a complaint about late delivery",
+    "expected_route": "actionable",
+    "expected_agent": "action_agent",
+    "expected_tool": "log_complaint",
+    "expected_keywords": ["ticket", "complaint", "logged"]
+  },
+  {
+    "query": "I'm unhappy with the damaged product I received",
+    "expected_route": "actionable",
+    "expected_agent": "action_agent",
+    "expected_tool": "log_complaint",
+    "expected_keywords": ["ticket", "complaint"]
+  },
+  {
+    "query": "Send a confirmation email to test@example.com",
+    "expected_route": "actionable",
+    "expected_agent": "action_agent",
+    "expected_tool": "send_confirmation_email",
+    "expected_keywords": ["email", "sent"]
+  },
+  {
+    "query": "How can I delete my account?",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["delete", "account"]
+  },
+  {
+    "query": "What sizes do you carry for men?",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["size", "chest", "waist"]
+  },
+  {
+    "query": "How long does a refund take?",
+    "expected_route": "informational",
+    "expected_agent": "retrieval_agent",
+    "expected_tool": null,
+    "expected_keywords": ["refund", "business days"]
+  }
+]
