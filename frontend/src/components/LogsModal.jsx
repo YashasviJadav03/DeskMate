@@ -9,8 +9,8 @@ export default function LogsModal({ isOpen, onClose }) {
     setLoading(true);
     try {
       const [logsRes, statsRes] = await Promise.all([
-        fetch('http://localhost:8000/logs?limit=30'),
-        fetch('http://localhost:8000/logs/stats')
+        fetch('http://127.0.0.1:8000/logs?limit=30'),
+        fetch('http://127.0.0.1:8000/logs/stats')
       ]);
       if (logsRes.ok) {
         const data = await logsRes.json();
