@@ -48,6 +48,17 @@ app.add_middleware(
 # ── Endpoints ────────────────────────────────────────────
 
 
+@app.get("/")
+async def root() -> dict:
+    """Root endpoint providing links to Swagger docs and frontend."""
+    return {
+        "service": "DeskMate — Multi-Agent Query Resolution System",
+        "status": "running",
+        "api_docs": "http://127.0.0.1:8000/docs",
+        "frontend_url": "http://127.0.0.1:5173",
+    }
+
+
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest) -> ChatResponse:
     """
